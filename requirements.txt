@@ -4,3 +4,5 @@ langchain-community==0.3.23
 langchain-groq==0.3.2
 chromadb==1.0.7
 streamlit==1.45.1
+pysqlite3-binary>=0.4.6
+
