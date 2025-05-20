@@ -1,4 +1,4 @@
-# DSA RAG Chatbot
+# AlgoAssist : DSA RAG Chatbot
 
 A Retrieval-Augmented Generation (RAG) chatbot for answering Data Structures and Algorithms questions using LangChain, ChromaDB, and Streamlit.
 
