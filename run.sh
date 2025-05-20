@@ -1,5 +1,5 @@
 #!/bin/bash
 echo "Building Chroma DB..."
-python app/build_chroma.py
+python app/chroma_data_pipeline.py
 echo "Starting Streamlit app..."
-streamlit run frontend/streamlit_app.py
+streamlit run interface/streamlit.py

@@ -8,4 +8,4 @@ sentence-transformers==4.1.0
 huggingface-hub==0.30.2
 text-generation==0.7.0
 tokenizers==0.21.1
-
+langchain-huggingface==0.0.1
