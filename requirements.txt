@@ -1,0 +1,11 @@
+langchain-groq==0.3.2
+langchain-core==0.3.58
+langchain-community==0.3.23
+langchain==0.3.24
+chromadb==1.0.7
+streamlit==1.45.1
+sentence-transformers==4.1.0
+huggingface-hub==0.30.2
+text-generation==0.7.0
+tokenizers==0.21.1
+
