@@ -1,6 +1,6 @@
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from chromadb import PersistentClient
 from config import GROQ_API_KEY, HF_TOKEN  # Import both keys
 import streamlit as st
@@ -28,7 +28,7 @@ def get_retriever(persist_dir="chroma_db"):
 
 def create_prompt():
     return ChatPromptTemplate.from_template(
-        """You are a highly knowledgeable and helpful assistant specialized in Data Structures and Algorithms.
+        """You are a helpful assistant specialized in Data Structures and Algorithms.
 Use the following context to answer the question.
 If the context is not relevant, provide an accurate answer based on your knowledge.
 
