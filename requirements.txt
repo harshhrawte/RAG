@@ -1,11 +1,10 @@
+streamlit==1.34.0
 langchain==0.3.25
 langchain-core==0.3.60
 langchain-community==0.3.24
 langchain-huggingface==0.2.0
 langchain-groq==0.3.2
 chromadb==0.4.24
-streamlit==1.34.0
-
 
 pypdf
 sentence-transformers
@@ -18,6 +17,3 @@ tenacity
 pydantic
 PyYAML
 SQLAlchemy
-fastapi
-grpcio
-uvicorn
