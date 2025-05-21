@@ -1,17 +1,25 @@
-🤖 AlgoAssist: DSA RAG Chatbot
-AlgoAssist is an intelligent Retrieval-Augmented Generation (RAG) chatbot designed to help students and developers learn and explore Data Structures and Algorithms (DSA). It uses a combination of LangChain, ChromaDB, LLaMA3, and Streamlit to provide accurate, context-aware answers extracted from a DSA book.
+# 🤖 AlgoAssist: Data Structures & Algorithms RAG Chatbot
 
-🚀 Features
-📘 PDF Knowledge Base: Ingests and indexes a DSA textbook using ChromaDB and sentence-transformer embeddings.
+AlgoAssist is an intelligent Retrieval-Augmented Generation (RAG) chatbot designed to help students and developers learn and explore Data Structures and Algorithms (DSA). It leverages the power of LangChain, ChromaDB, LLaMA3, and Streamlit to provide accurate, context-aware answers extracted from a comprehensive DSA textbook.
 
-🔍 Retrieval-Augmented Generation: Retrieves relevant chunks before generating responses using LLaMA3.
+## 🚀 Features
 
-💬 Natural Chat Interface: Built with Streamlit for an interactive and user-friendly experience.
+- **📘 PDF Knowledge Base**: Ingests and indexes a DSA textbook using ChromaDB and sentence-transformer embeddings
+- **🔍 Retrieval-Augmented Generation**: Retrieves relevant text chunks before generating responses using LLaMA3
+- **💬 Natural Chat Interface**: Built with Streamlit for an interactive and user-friendly experience
+- **⚙️ Efficient Query Processing**: Uses sentence-transformers for semantic search and LLaMA3-8B for generation
+- **📊 Context-Aware Responses**: Provides algorithm explanations, comparisons, and implementation details with academic precision
 
-⚙️ Efficient Query Processing: Uses sentence-transformers for semantic search and LLaMA3-8B for generation.
+## 📋 Prerequisites
 
-📁 Project Structure
+- Python 3.9+
+- Groq API key (for LLaMA3 access)
+- HuggingFace token (for embeddings)
+- A PDF of a Data Structures and Algorithms textbook
 
+## 📁 Project Structure
+
+```
 LLM-RAG/
 ├── app/
 │   ├── __init__.py
@@ -35,36 +43,86 @@ LLM-RAG/
 ├── .gitignore
 ├── .dockerignore
 └── README.md                # Project documentation
+```
 
-🛠️ Setup Instructions
-1. Clone the Repository
- 
+## 🛠️ Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/harshhrawte/LLM-RAG.git
 cd LLM-RAG
+```
 
-2. Create a Virtual Environment
+### 2. Create a Virtual Environment
 
+```bash
 python -m venv env
 source env/bin/activate   # On Windows: env\Scripts\activate
+```
 
-3. Install Dependencies
+### 3. Install Dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-4. Set Up API Keys
-Create a config.py file in the root directory with the following content:
+### 4. Set Up API Keys
 
+Create a `config.py` file in the root directory with the following content:
+
+```python
 GROQ_API_KEY = "your-groq-api-key"
 HF_TOKEN = "your-huggingface-token"
+```
 
-✅ Note: You’ll need a Groq API key and a HuggingFace token to use the LLaMA3 model and embeddings.
 
-I have added the chroma_db as well so that bu just entering the api , one can directly run 
+Visit http://localhost:8501 in your browser to start chatting with AlgoAssist!
 
- streamlit run streamlit.py
+## 🐳 Docker Support
 
- Visit http://localhost:8501 in your browser to start chatting with AlgoAssist!
+You can also run AlgoAssist in a Docker container:
 
- Some Screenshots of the output:
+```bash
+# Build the Docker image
+docker build -t algoassist .
 
- 
+# Run the container
+docker run -p 8501:8501 algoassist
+```
+
+## 📱 Usage Examples
+
+- "Explain the time complexity of quicksort."
+- "What's the difference between BFS and DFS?"
+- "How do I implement a balanced binary search tree?"
+- "Compare dynamic programming and greedy algorithms."
+- "Explain the Dijkstra's algorithm with an example."
+
+## 🔄 How It Works
+
+1. **Text Ingestion**: The DSA book is split into chunks and embedded using sentence-transformers.
+2. **Vector Storage**: Text embeddings are stored in ChromaDB for efficient retrieval.
+3. **Query Processing**: User questions are embedded and semantically similar chunks are retrieved.
+4. **Context-Enhanced Generation**: LLaMA3 generates responses based on the retrieved context and the user query.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👏 Acknowledgements
+
+- LangChain for the RAG framework
+- Groq for LLaMA3 API access
+- HuggingFace for embedding models
+- ChromaDB for vector storage
+- Streamlit for the interactive interface
+
+## 🔗 Contact
+
+For questions or feedback, please open an issue on this repository or contact:
+- GitHub: [harshhrawte](https://github.com/harshhrawte)
+
+---
+
+Happy coding and learning DSA with AlgoAssist! 🚀
