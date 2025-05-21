@@ -75,9 +75,13 @@ Create a `config.py` file in the root directory with the following content:
 GROQ_API_KEY = "your-groq-api-key"
 HF_TOKEN = "your-huggingface-token"
 ```
-
-
 Visit http://localhost:8501 in your browser to start chatting with AlgoAssist!
+
+
+### 5. Vector Database (BOOK provide for the chroma DB) 
+
+https://drive.google.com/file/d/1W65q3k0WWLJNfmbnptyBIkEQXIULi57f/view?usp=sharing 
+
 
 ## 🐳 Docker Support
 
@@ -105,24 +109,49 @@ docker run -p 8501:8501 algoassist
 2. **Vector Storage**: Text embeddings are stored in ChromaDB for efficient retrieval.
 3. **Query Processing**: User questions are embedded and semantically similar chunks are retrieved.
 4. **Context-Enhanced Generation**: LLaMA3 generates responses based on the retrieved context and the user query.
+📸 Output Examples
+Here are some screenshots showing AlgoAssist in action:
 
-## 📝 License
+Example 1: Explains the basic concept :
 
+![Screenshot 2025-05-21 223301](https://github.com/user-attachments/assets/3d9eeece-bb04-4c77-a770-f28df9582441)
+
+AlgoAssist explaining a complex algorithm with context from the DSA book
+
+Example 2: Gives the relevant link to solve and practice the problem 
+
+![Screenshot 2025-05-21 223545](https://github.com/user-attachments/assets/734bd3f0-8737-4ab8-a82e-c050cec0f865)
+
+weblink of the problem 
+
+Example 3: Solves the Complex problems 
+
+![Screenshot 2025-05-21 223927](https://github.com/user-attachments/assets/e7461bc9-a5ef-4a8b-880e-bc03c551f9bf)
+
+![Screenshot 2025-05-21 224034](https://github.com/user-attachments/assets/e092600c-8f06-48a4-8503-ab3449a3e54d)
+
+Example 4: Solves errors from the code snippet provided
+
+![Screenshot 2025-05-21 224451](https://github.com/user-attachments/assets/82f5c6ed-2c26-4eda-99a4-77e7ad41934e)
+
+Code explanation and implementation details for a specific algorithm
+
+📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 👏 Acknowledgements
+👏 Acknowledgements
 
-- LangChain for the RAG framework
-- Groq for LLaMA3 API access
-- HuggingFace for embedding models
-- ChromaDB for vector storage
-- Streamlit for the interactive interface
+LangChain for the RAG framework
+Groq for LLaMA3 API access
+HuggingFace for embedding models
+ChromaDB for vector storage
+Streamlit for the interactive interface
+
 
 ## 🔗 Contact
 
 For questions or feedback, please open an issue on this repository or contact:
 - GitHub: [harshhrawte](https://github.com/harshhrawte)
 
----
 
 Happy coding and learning DSA with AlgoAssist! 🚀
