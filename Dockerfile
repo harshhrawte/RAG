@@ -6,19 +6,23 @@ ENV VECTOR_DB_PATH=/app/chroma_db
 
 WORKDIR /app
 
+# Install system dependencies first
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     curl \
+    git \
+    libgl1 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip
 
+
 # Copy and install requirements
-COPY requirements.txt /app/requirements.txt
-RUN pip install --no-cache-dir -r /app/requirements.txt
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy your app code
-COPY . /app
+COPY . .
 
 EXPOSE 8501
 

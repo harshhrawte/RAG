@@ -24,29 +24,14 @@ __pycache__/
 # Common folders to ignore
 venv/
 env/
-llm-rag-env/  # ❌ exclude your custom env folder
+llm-rag-env/  
 node_modules/
 .idea/
 .vscode/
 
 # Model & ML binary files
-*.model
-*.pt
-*.h5
-*.onnx
-*.sav
-*.pkl  # Only if you don't need model.pkl inside container
 
-# Media files
-*.mp4
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.pdf
-*.docx
-*.pptx
 
-# ✅ Keep these essential project components
-!chroma.db
+
+
 !data/

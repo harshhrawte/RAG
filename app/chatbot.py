@@ -1,5 +1,6 @@
 from app.llm import get_llm, get_retriever, create_prompt
 
+#from llm to chatbot 
 def answer_query(query):
     llm = get_llm()
     collection, embeddings = get_retriever()
