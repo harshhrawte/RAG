@@ -1,24 +1,20 @@
 # Ignore data folder contains the book 
-# As the chroma DB is created and its uploaded so the book used as a dataset is DSA BOOK.pdf which is attached in the google drive link 
+# As the chroma DB is created and uploaded, so the book used as a dataset is DSA BOOK.pdf which is attached in the google drive link
 data/
 
 # Ignore environment variables
-# The env file contains the api key for the model 
+# The .env file contains the API key for the model 
 .env
-
 
 # Python cache
 __pycache__/
-*/__pycache__/
-
+**/__pycache__/
 
 # Ignore Docker or system files 
 *.log
 *.tmp
 
-
 # Ignore virtual environments 
 env/
 venv/
 llm-rag-env/
-
