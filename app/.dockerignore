@@ -1,0 +1,52 @@
+# Bytecode and Python internals
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs, archives, and temp files
+*.log
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.bak
+*.tmp
+
+# Large and unnecessary file types
+*.csv
+*.tsv
+*.xlsx
+*.ipynb
+.DS_Store
+.env
+
+# Common folders to ignore
+venv/
+env/
+llm-rag-env/  # ❌ exclude your custom env folder
+node_modules/
+.idea/
+.vscode/
+
+# Model & ML binary files
+*.model
+*.pt
+*.h5
+*.onnx
+*.sav
+*.pkl  # Only if you don't need model.pkl inside container
+
+# Media files
+*.mp4
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.pdf
+*.docx
+*.pptx
+
+# ✅ Keep these essential project components
+!chroma.db
+!data/
