@@ -6,7 +6,7 @@ ENV VECTOR_DB_PATH=/app/chroma_db
 
 WORKDIR /app
 
-# Install system dependencies first
+# --- Install system dependencies ---
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     curl \
@@ -14,16 +14,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgl1 \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip
+# --- Upgrade pip and clear cache ---
+RUN pip install --upgrade pip && pip cache purge
 
-# ✅ Install CPU-compatible PyTorch manually
-RUN pip install torch==2.1.0+cpu torchvision==0.16.0+cpu torchaudio==2.1.0+cpu --index-url https://download.pytorch.org/whl/cpu
+# --- Install torch manually to avoid conflict ---
+RUN pip install torch==2.7.0+cpu torchvision==0.18.1+cpu torchaudio==2.7.0+cpu --index-url https://download.pytorch.org/whl/cpu
 
-# Copy and install requirements
+# --- Copy requirements file and install rest ---
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy your app code
+# --- Copy your application code ---
 COPY . .
 
 EXPOSE 8501
