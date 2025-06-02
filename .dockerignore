@@ -19,7 +19,7 @@ __pycache__/
 *.xlsx
 *.ipynb
 .DS_Store
-.env
+
 
 # Common folders to ignore
 venv/
