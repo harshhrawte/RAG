@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.10.16
 
 ENV PYTHONUNBUFFERED=1
 ENV LANG=C.UTF-8
@@ -17,10 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # --- Upgrade pip and clear cache ---
 RUN pip install --upgrade pip && pip cache purge
 
-# --- Install torch manually to avoid conflict ---
-RUN pip install torch==2.7.0+cpu torchvision==0.18.1+cpu torchaudio==2.7.0+cpu --index-url https://download.pytorch.org/whl/cpu
-
-# --- Copy requirements file and install rest ---
+# --- Copy requirements file and install all dependencies (including torch) ---
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
